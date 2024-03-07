@@ -1,0 +1,151 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #16171a;
+    color: #fff;
+    background-image: url('portal-rick-and-morty.gif'); /* Reemplaza 'portal-rick-and-morty.gif' con la ruta de tu imagen */
+    background-repeat: no-repeat;
+    background-size: 10%; /* Tamaño más pequeño */
+    background-position: center;
+    animation: randomMovement 20s infinite alternate;
+}
+
+/* Ajusta la posición de la imagen de fondo */
+@keyframes randomMovement {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 50% 0%; }
+    50% { background-position: 100% 0%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 100% 100%; }
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+}
+
+/* Estilos para la lista de personajes */
+#character-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Estilos para la imagen de título */
+.title-image {
+    max-width: 400px; /* Tamaño máximo deseado para la imagen */
+    height: auto; /* Para mantener la proporción de la imagen */
+}
+
+.card {
+    background-color: #1d1f24;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 5px;
+}
+
+/* Estilos para la paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #555;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.page-link:hover {
+    background-color: #555;
+}
+
+/* Estilos para el formulario de búsqueda */
+#searchForm {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+#filterButton {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#filterButton:hover {
+    background-color: #218838;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #1d1f24;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Estilos para el contenedor de partículas */
+#particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegura que esté detrás del contenido */
+}
+
+/* Estilos para el contenedor principal */
+.main-container {
+    position: relative;
+    z-index: 1; /* Asegura que esté delante de las partículas */
+}
